@@ -43,8 +43,9 @@ Không đưa thư mục `.venv` vào ZIP. Môi trường ảo sẽ được tạ
 
 ## Nguyên tắc phân tích và diễn giải insight
 
-Mỗi trang phân tích sử dụng cấu trúc: **phát hiện → bằng chứng trực quan → vì sao chọn biểu đồ → đánh giá/giới hạn → hàm ý hành động**. Insight và số liệu được tính lại theo bộ lọc toàn cục hiện hành.
+Trang tổng quan trình bày sáu insight chính theo chuỗi **Quan sát → So sánh → Điều tra → Hiểu biết**, sau đó giải thích **vì sao chọn biểu đồ** và **đánh giá/giới hạn**. Các trang chi tiết mở rộng phân tích; số liệu được tính lại theo bộ lọc toàn cục hiện hành.
 
+- Mỗi insight so sánh các nhóm bằng số liệu có cùng mẫu số thích hợp, điều tra thêm yếu tố liên quan như cơ cấu danh mục, giá vốn, mức giảm giá hoặc quy mô giao dịch, rồi nêu hàm ý hành động.
 - Lý do chọn biểu đồ gắn với câu hỏi phân tích: so sánh nhóm dùng bar, xu hướng theo thời gian dùng line, quan hệ giữa hai biến số dùng scatter; biểu đồ kết hợp được giải thích rõ khi dùng hai trục khác đơn vị.
 - Phần đánh giá nêu giới hạn diễn giải như cỡ mẫu, ngoại lệ, trục kép, dữ liệu thiếu hoặc tương quan không hàm ý nhân quả; không coi hình thức biểu đồ là bằng chứng vượt quá dữ liệu.
 

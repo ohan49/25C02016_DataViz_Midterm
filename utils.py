@@ -38,17 +38,30 @@ def insight_card(number, tag, title, description):
 
 
 def analytical_insight(
-    tag, title, finding, evidence, implication, chart_reason=None, evaluation=None
+    tag, title, finding, evidence, implication, chart_reason=None, evaluation=None,
+    investigation=None,
 ):
-    """Khối insight có phát hiện, bằng chứng, lựa chọn biểu đồ và đánh giá."""
+    """Khối insight; có thể trình bày chuỗi lập luận bốn bước."""
+    if investigation is None:
+        analysis = [
+            f'<p><b>Phát hiện:</b> {html.escape(str(finding))}</p>',
+            f'<p><b>Bằng chứng:</b> {html.escape(str(evidence))}</p>',
+            f'<p><b>Hàm ý:</b> {html.escape(str(implication))}</p>',
+        ]
+    else:
+        analysis = [
+            f'<p><b>1 · Quan sát:</b> {html.escape(str(finding))}</p>',
+            f'<p><b>2 · So sánh:</b> {html.escape(str(evidence))}</p>',
+            f'<p><b>3 · Điều tra:</b> {html.escape(str(investigation))}</p>',
+            f'<p><b>4 · Hiểu biết:</b> {html.escape(str(implication))}</p>',
+        ]
     parts = [
         f'<div class="insight"><span class="tag">{html.escape(str(tag))}</span>',
         f'<h3>{html.escape(str(title))}</h3>',
-        f'<p><b>Phát hiện:</b> {html.escape(str(finding))}</p>',
-        f'<p><b>Bằng chứng:</b> {html.escape(str(evidence))}</p>',
+        *analysis,
         f'<p><b>Vì sao chọn biểu đồ:</b> {html.escape(str(chart_reason or "Biểu đồ được chọn để thể hiện trực tiếp mối quan hệ cần trả lời trong câu hỏi phân tích."))}</p>',
         f'<p><b>Đánh giá:</b> {html.escape(str(evaluation or "Kết luận chỉ áp dụng cho dữ liệu đang chọn; cần xem xét cỡ mẫu và giới hạn dữ liệu trước khi khái quát."))}</p>',
-        f'<p><b>Hàm ý:</b> {html.escape(str(implication))}</p></div>',
+        '</div>',
     ]
     st.markdown("".join(parts), unsafe_allow_html=True)
 

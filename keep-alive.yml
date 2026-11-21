@@ -1,0 +1,15 @@
+name: Keep Streamlit App Alive
+
+on:
+  schedule:
+    # Chạy tự động mỗi 6 tiếng một lần
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Cho phép chạy thủ công để kiểm tra
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Streamlit App
+        run: |
+          curl -I -s https://25c02016-dataviz-midterm.streamlit.app | head -n 1

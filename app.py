@@ -135,7 +135,7 @@ page_key = NAVIGATION[selected_label]
 
 render_hero(
     APP_TITLE,
-    "5 câu hỏi phân tích · 5 phát hiện có bằng chứng trực quan · Hàm ý kinh doanh từ dữ liệu bán lẻ TP. Hồ Chí Minh.",
+    "6 câu hỏi phân tích · 6 phát hiện có bằng chứng trực quan · So sánh, điều tra và hàm ý kinh doanh từ dữ liệu bán lẻ TP. Hồ Chí Minh.",
 )
 
 if df.empty:
